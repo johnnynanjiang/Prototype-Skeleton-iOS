@@ -43,5 +43,21 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    <!--Facebook SDK Begin-->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb488026868042421</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>488026868042421</string>
+    <key>FacebookDisplayName</key>
+    <string>Prototype-Skeleton-iOS</string>
+    <!--Facebook SDK End-->
 </dict>
 </plist>
