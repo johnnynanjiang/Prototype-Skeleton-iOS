@@ -53,6 +53,7 @@
 		090673131BE73B6300E1B403 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		090673141BE73B6300E1B403 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		090673151BE73B6300E1B403 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		098D8D831BE744F900AC6751 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 		090672C91BE7377E00E1B403 /* Prototype-Skeleton */ = {
 			isa = PBXGroup;
 			children = (
+				098D8D831BE744F900AC6751 /* Bridging-Header.h */,
 				090672CA1BE7377E00E1B403 /* AppDelegate.swift */,
 				090672CC1BE7377E00E1B403 /* ViewController.swift */,
 				090672CE1BE7377E00E1B403 /* Main.storyboard */,
@@ -434,6 +436,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.azolla.iOS.Prototype-Skeleton";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Prototype-Skeleton/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -449,6 +452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.azolla.iOS.Prototype-Skeleton";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Prototype-Skeleton/Bridging-Header.h";
 			};
 			name = Release;
 		};
