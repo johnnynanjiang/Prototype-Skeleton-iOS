@@ -16,6 +16,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         // Optional: Place the button in the center of your view.
         let loginButton = FBSDKLoginButton();
+        loginButton.loginBehavior = FBSDKLoginBehavior.Native;
         loginButton.center = self.view.center;
         loginButton.readPermissions = ["public_profile", "email", "user_friends"];
         loginButton.delegate = self;

@@ -43,6 +43,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -52,14 +53,46 @@
 			</array>
 		</dict>
 	</array>
+    
 	<key>FacebookAppID</key>
 	<string>488026868042421</string>
 	<key>FacebookDisplayName</key>
 	<string>Prototype-Skeleton-iOS</string>
     
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>facebook.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            <key>fbcdn.net</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            <key>akamaihd.net</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
+    
     <key>LSApplicationQueriesSchemes</key>
     <array>
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
         <string>fbauth2</string>
+        <string>fbshareextension</string>
     </array>
 </dict>
 </plist>
