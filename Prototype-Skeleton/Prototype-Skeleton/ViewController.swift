@@ -16,8 +16,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         // Optional: Place the button in the center of your view.
         let loginButton = FBSDKLoginButton();
-        loginButton.loginBehavior = FBSDKLoginBehavior.Native;
         loginButton.center = self.view.center;
+        loginButton.loginBehavior = FBSDKLoginBehavior.Native;
         loginButton.readPermissions = ["public_profile", "email", "user_friends"];
         loginButton.delegate = self;
         self.view.addSubview(loginButton);
@@ -45,12 +45,24 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             if result.grantedPermissions.contains("email")
             {
                 // Do work
+                print(FBSDKAccessToken.currentAccessToken().tokenString);
+                
+                let pictureRequest = FBSDKGraphRequest(graphPath: "me/picture?type=large&redirect=false", parameters: nil)
+                pictureRequest.startWithCompletionHandler({
+                    (connection, result, error: NSError!) -> Void in
+                    if error == nil {
+                        print("\(result)")
+                    } else {
+                        print("\(error)")
+                    }
+                })
             }
         }
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
+        print(FBSDKAccessToken.currentAccessToken()?.tokenString);
     }
     // <<< Facebook Delegate Methods
 }
