@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swinject
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
@@ -21,6 +22,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.readPermissions = ["public_profile", "email", "user_friends"];
         loginButton.delegate = self;
         self.view.addSubview(loginButton);
+        
+        let container = Container();
     }
 
     override func didReceiveMemoryWarning() {
